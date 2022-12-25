@@ -9,7 +9,7 @@ import { currency } from '../utils/currency'
 import { useDispatch } from 'react-redux'
 import { getCartAction } from '../store/cartReducer'
 import { useEffect } from 'react'
-import { generatePath, Link } from 'react-router-dom'
+import { generatePath, Link, Navigate } from 'react-router-dom'
 import { path } from '../config/path'
 import TotalBill from '../component/TotalBill'
 
@@ -32,6 +32,10 @@ export default function ViewCart() {
             dispatch(getCartAction())
         }
 
+    }
+
+    if (cart?.totalQuantity === 0) {
+        return <Navigate to={ path.Shop } />
     }
 
     return (

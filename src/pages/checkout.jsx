@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { generatePath, useNavigate } from 'react-router-dom'
+import { generatePath, Navigate, useNavigate } from 'react-router-dom'
 import Button from '../component/Button'
 import CartItem from '../component/CartItem'
 import Input from '../component/Input'
@@ -22,6 +22,7 @@ export default function Checkout() {
     const navigate = useNavigate()
     const { data: address } = useQuery(() => profileService.getAddressDefault())
     const { execute: checkout, loading, error: errCheckout } = useAsync(cartService.checkout)
+    const { user } = useAuth()
 
     // console.log('address', address)
     const dispatch = useDispatch()
@@ -72,6 +73,14 @@ export default function Checkout() {
     const onChangeShippingMethod = async (method) => {
         await cartService.changeShippingMethod(method)
         dispatch(getCartAction())
+    }
+
+    if (!user) {
+        return <Navigate to={ path.Auth } />
+    }
+
+    if (cart?.totalQuantity === 0) {
+        return <Navigate to={ path.Shop } />
     }
 
     return (

@@ -13,6 +13,7 @@ const Auth = lazy(() => import('./pages/auth'))
 const Wishlist = lazy(() => import('./pages/account/wishlist'))
 const Address = lazy(() => import('./pages/account/address/index'))
 const AddressAction = lazy(() => import('./pages/account/address/[action][id]'))
+const MyOrder = lazy(() => import('./pages/account/order'))
 const ViewCart = lazy(() => import('./pages/view-cart'))
 const Checkout = lazy(() => import('./pages/checkout'))
 const OrderCompleted = lazy(() => import('./pages/OrderCompleted'))
@@ -65,6 +66,9 @@ const routers = [
                         path: path.Account.AddressAction, element: <AddressAction />
                     },
 
+                    {
+                        path: path.Account.MyOrder, element: <MyOrder />
+                    },
                 ]
             },
 

@@ -15,6 +15,9 @@ export default function CartDrawer() {
     const { cart } = useCart()
     const navigate = useNavigate()
 
+    const onCloseCartDrawer = () => {
+        dispatch(toggleCartDrawerAction(false))
+    }
 
 
     return (
@@ -44,8 +47,8 @@ export default function CartDrawer() {
                         </div>
                         {/* Buttons */ }
                         <div className="modal-body">
-                            <Link className="btn btn-block btn-dark" to={ path.Checkout }>Continue to Checkout</Link>
-                            <Link className="btn btn-block btn-outline-dark" to={ path.ViewCart }>View Cart</Link>
+                            <Link onClick={ onCloseCartDrawer } className="btn btn-block btn-dark" to={ path.Checkout }>Continue to Checkout</Link>
+                            <Link onClick={ onCloseCartDrawer } className="btn btn-block btn-outline-dark" to={ path.ViewCart }>View Cart</Link>
                         </div>
                     </div>
                     {/* Empty cart (remove `.d-none` to enable it) */ }
