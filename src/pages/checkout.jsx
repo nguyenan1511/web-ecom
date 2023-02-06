@@ -67,6 +67,7 @@ export default function Checkout() {
                 'note': form.note
             }))
             navigate(generatePath(path.OrderCompleted, { id: res.data._id }))
+            // console.log('cart', cart)
         }
     }
 

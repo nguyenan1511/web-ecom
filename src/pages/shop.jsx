@@ -2,8 +2,16 @@ import React from "react";
 import { useSearchParams } from "react-router-dom";
 import Paginate from "../component/Paginate";
 import ProductCard from "../component/ProductCard";
+import Slider from "../component/Slider";
 import { useCurrentPage, useQuery } from "../core";
 import productService from "../service/product.service";
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import 'swiper/css';
+// import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
+// import 'swiper/css/scrollbar';
 
 export default function Shop() {
   const currentPage = useCurrentPage()
@@ -1232,12 +1240,19 @@ export default function Shop() {
             </div>
             <div className="col-12 col-md-8 col-lg-9">
               {/* Slider */ }
+
               <div
                 className="flickity-page-dots-inner mb-9"
                 data-flickity='{"pageDots": true}'
               >
-                {/* Item */ }
-                <div className="w-100">
+                <Slider
+                // slidesPerView={ 1 }
+                // onSlideChange={ () => console.log('slide change') }
+                // onSwiper={ (swiper) => console.log(swiper) }
+                // modules={ [ Navigation, Pagination, Scrollbar, A11y ] }
+                // pagination={ { clickable: true } }
+
+                >
                   <div
                     className="card bg-h-100 bg-left"
                     style={ { backgroundImage: "url(/img/covers/cover-24.jpg)" } }
@@ -1265,9 +1280,6 @@ export default function Shop() {
                       />
                     </div>
                   </div>
-                </div>
-                {/* Item */ }
-                <div className="w-100">
                   <div
                     className="card bg-cover"
                     style={ { backgroundImage: "url(/img/covers/cover-29.jpg)" } }
@@ -1297,9 +1309,6 @@ export default function Shop() {
                       </div>
                     </div>
                   </div>
-                </div>
-                {/* Item */ }
-                <div className="w-100">
                   <div
                     className="card bg-cover"
                     style={ { backgroundImage: "url(/img/covers/cover-30.jpg)" } }
@@ -1325,7 +1334,7 @@ export default function Shop() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Slider>
               </div>
               {/* Header */ }
               <div className="row align-items-center mb-7">

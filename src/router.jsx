@@ -17,6 +17,7 @@ const MyOrder = lazy(() => import('./pages/account/order'))
 const ViewCart = lazy(() => import('./pages/view-cart'))
 const Checkout = lazy(() => import('./pages/checkout'))
 const OrderCompleted = lazy(() => import('./pages/OrderCompleted'))
+const ProductDetail = lazy(() => import('./pages/product/[slug]'))
 
 const routers = [
     {
@@ -45,6 +46,10 @@ const routers = [
 
             {
                 path: path.OrderCompleted, element: <OrderCompleted />
+            },
+
+            {
+                path: path.ProductDetail, element: <ProductDetail />
             },
 
             {

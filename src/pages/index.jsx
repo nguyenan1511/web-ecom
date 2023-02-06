@@ -1,72 +1,74 @@
 import React from "react";
+import Slider from "../component/Slider";
+import { Tab } from "../component/Tab";
 
 export default function Home() {
   return (
     <>
       <div>
-        {/* CATEGORIES */}
+        {/* CATEGORIES */ }
         <section>
           <div
             className="row no-gutters d-block d-lg-flex flickity flickity-lg-none"
             data-flickity='{"watchCSS": true}'
           >
-            {/* Item */}
+            {/* Item */ }
             <div
               className="col-12 col-md-6 col-lg-4 d-flex flex-column bg-cover"
-              style={{ backgroundImage: "url(/img/covers/cover-1.jpg)" }}
+              style={ { backgroundImage: "url(/img/covers/cover-1.jpg)" } }
             >
               <div
                 className="card bg-dark-5 bg-hover text-white text-center"
-                style={{ minHeight: "470px" }}
+                style={ { minHeight: "470px" } }
               >
                 <div className="card-body mt-auto mb-n11 py-8">
-                  {/* Heading */}
+                  {/* Heading */ }
                   <h1 className="mb-0 font-weight-bolder">Women</h1>
                 </div>
                 <div className="card-body mt-auto py-8">
-                  {/* Button */}
+                  {/* Button */ }
                   <a className="btn btn-white stretched-link" href="shop.html">
                     Shop Women <i className="fe fe-arrow-right ml-2" />
                   </a>
                 </div>
               </div>
             </div>
-            {/* Card */}
+            {/* Card */ }
             <div
               className="col-12 col-md-6 col-lg-4 d-flex flex-column bg-cover"
-              style={{ backgroundImage: "url(/img/covers/cover-2.jpg)" }}
+              style={ { backgroundImage: "url(/img/covers/cover-2.jpg)" } }
             >
               <div
                 className="card bg-dark-5 bg-hover text-white text-center"
-                style={{ minHeight: "470px" }}
+                style={ { minHeight: "470px" } }
               >
                 <div className="card-body mt-auto mb-n11 py-8">
-                  {/* Heading */}
+                  {/* Heading */ }
                   <h1 className="mb-0 font-weight-bolder">Men</h1>
                 </div>
                 <div className="card-body mt-auto py-8">
-                  {/* Button */}
+                  {/* Button */ }
                   <a className="btn btn-white stretched-link" href="shop.html">
                     Shop Men <i className="fe fe-arrow-right ml-2" />
                   </a>
                 </div>
               </div>
             </div>
-            {/* Card */}
+            {/* Card */ }
             <div
               className="col-12 col-md-6 col-lg-4 d-flex flex-column bg-cover"
-              style={{ backgroundImage: "url(/img/covers/cover-3.jpg)" }}
+              style={ { backgroundImage: "url(/img/covers/cover-3.jpg)" } }
             >
               <div
                 className="card bg-dark-5 bg-hover text-white text-center"
-                style={{ minHeight: "470px" }}
+                style={ { minHeight: "470px" } }
               >
                 <div className="card-body mt-auto mb-n11 py-8">
-                  {/* Heading */}
+                  {/* Heading */ }
                   <h1 className="mb-0 font-weight-bolder">Kids</h1>
                 </div>
                 <div className="card-body mt-auto py-8">
-                  {/* Button */}
+                  {/* Button */ }
                   <a className="btn btn-white stretched-link" href="shop.html">
                     Shop Kids <i className="fe fe-arrow-right ml-2" />
                   </a>
@@ -75,20 +77,20 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* FEATURES */}
+        {/* FEATURES */ }
         <section className="pt-7">
           <div className="container">
             <div className="row pb-7 border-bottom">
               <div className="col-12 col-md-6 col-lg-3">
-                {/* Item */}
+                {/* Item */ }
                 <div className="d-flex mb-6 mb-lg-0">
-                  {/* Icon */}
+                  {/* Icon */ }
                   <i className="fe fe-truck font-size-lg text-primary" />
-                  {/* Body */}
+                  {/* Body */ }
                   <div className="ml-6">
-                    {/* Heading */}
+                    {/* Heading */ }
                     <h6 className="heading-xxs mb-1">Free shipping</h6>
-                    {/* Text */}
+                    {/* Text */ }
                     <p className="mb-0 font-size-sm text-muted">
                       From all orders over $100
                     </p>
@@ -96,15 +98,15 @@ export default function Home() {
                 </div>
               </div>
               <div className="col-12 col-md-6 col-lg-3">
-                {/* Item */}
+                {/* Item */ }
                 <div className="d-flex mb-6 mb-lg-0">
-                  {/* Icon */}
+                  {/* Icon */ }
                   <i className="fe fe-repeat font-size-lg text-primary" />
-                  {/* Body */}
+                  {/* Body */ }
                   <div className="ml-6">
-                    {/* Heading */}
+                    {/* Heading */ }
                     <h6 className="mb-1 heading-xxs">Free returns</h6>
-                    {/* Text */}
+                    {/* Text */ }
                     <p className="mb-0 font-size-sm text-muted">
                       Return money within 30 days
                     </p>
@@ -112,15 +114,15 @@ export default function Home() {
                 </div>
               </div>
               <div className="col-12 col-md-6 col-lg-3">
-                {/* Item */}
+                {/* Item */ }
                 <div className="d-flex mb-6 mb-md-0">
-                  {/* Icon */}
+                  {/* Icon */ }
                   <i className="fe fe-lock font-size-lg text-primary" />
-                  {/* Body */}
+                  {/* Body */ }
                   <div className="ml-6">
-                    {/* Heading */}
+                    {/* Heading */ }
                     <h6 className="mb-1 heading-xxs">Secure shopping</h6>
-                    {/* Text */}
+                    {/* Text */ }
                     <p className="mb-0 font-size-sm text-muted">
                       You're in safe hands
                     </p>
@@ -128,15 +130,15 @@ export default function Home() {
                 </div>
               </div>
               <div className="col-12 col-md-6 col-lg-3">
-                {/* Item */}
+                {/* Item */ }
                 <div className="d-flex">
-                  {/* Icon */}
+                  {/* Icon */ }
                   <i className="fe fe-tag font-size-lg text-primary" />
-                  {/* Body */}
+                  {/* Body */ }
                   <div className="ml-6">
-                    {/* Heading */}
+                    {/* Heading */ }
                     <h6 className="mb-1 heading-xxs">Over 10,000 Styles</h6>
-                    {/* Text */}
+                    {/* Text */ }
                     <p className="mb-0 font-size-sm text-muted">
                       We have everything you need
                     </p>
@@ -146,18 +148,18 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* BEST PICKS */}
+        {/* BEST PICKS */ }
         <section className="pt-12">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-12 col-md-10 col-lg-8 col-xl-6 text-center">
-                {/* Preheading */}
+                {/* Preheading */ }
                 <h6 className="heading-xxs mb-3 text-gray-400">
                   New Collection
                 </h6>
-                {/* Heading */}
+                {/* Heading */ }
                 <h2 className="mb-4">Best Picks 2019</h2>
-                {/* Subheading */}
+                {/* Subheading */ }
                 <p className="mb-10 text-gray-500">
                   Appear, dry there darkness they're seas, dry waters thing fly
                   midst. Beast, above fly brought Very green.
@@ -166,28 +168,28 @@ export default function Home() {
             </div>
             <div className="row">
               <div className="col-12 col-md-5 col-lg-4 d-flex flex-column">
-                {/* Card */}
+                {/* Card */ }
                 <div
                   className="card mb-7 text-white"
-                  style={{
+                  style={ {
                     minHeight: "400px",
                     backgroundImage: "url(/img/products/product-1.jpg)",
-                  }}
+                  } }
                 >
-                  {/* Background */}
+                  {/* Background */ }
                   <div className="card-bg">
                     <div
                       className="card-bg-img bg-cover"
-                      style={{
+                      style={ {
                         backgroundImage: "url(/img/products/product-1.jpg)",
-                      }}
+                      } }
                     />
                   </div>
-                  {/* Body */}
+                  {/* Body */ }
                   <div className="card-body my-auto text-center">
-                    {/* Heading */}
+                    {/* Heading */ }
                     <h4 className="mb-0">Bags Collection</h4>
-                    {/* Link */}
+                    {/* Link */ }
                     <a
                       className="btn btn-link stretched-link text-reset"
                       href="shop.html"
@@ -198,30 +200,30 @@ export default function Home() {
                 </div>
               </div>
               <div className="col-12 col-md-7 col-lg-8 d-flex flex-column">
-                {/* Card */}
+                {/* Card */ }
                 <div
                   className="card mb-7 text-body"
-                  style={{ minHeight: "400px" }}
+                  style={ { minHeight: "400px" } }
                 >
-                  {/* Background */}
+                  {/* Background */ }
                   <div className="card-bg">
                     <div
                       className="card-bg-img bg-cover"
-                      style={{
+                      style={ {
                         backgroundImage: "url(/img/products/product-2.jpg)",
-                      }}
+                      } }
                     />
                   </div>
-                  {/* Body */}
+                  {/* Body */ }
                   <div className="card-body my-auto px-md-10 text-center text-md-left">
-                    {/* Circle */}
+                    {/* Circle */ }
                     <div className="card-circle card-circle-lg card-circle-right">
                       <strong>save</strong>
                       <span className="font-size-h4 font-weight-bold">30%</span>
                     </div>
-                    {/* Heading */}
+                    {/* Heading */ }
                     <h4 className="mb-0">Printed men’s Shirts</h4>
-                    {/* Link */}
+                    {/* Link */ }
                     <a
                       className="btn btn-link stretched-link px-0 text-reset"
                       href="shop.html"
@@ -232,25 +234,25 @@ export default function Home() {
                 </div>
               </div>
               <div className="col-12 col-md-7 col-lg-8 d-flex flex-column">
-                {/* Card */}
+                {/* Card */ }
                 <div
                   className="card mb-7 mb-md-0 text-body"
-                  style={{ minHeight: "400px" }}
+                  style={ { minHeight: "400px" } }
                 >
-                  {/* Background */}
+                  {/* Background */ }
                   <div className="card-bg">
                     <div
                       className="card-bg-img bg-cover"
-                      style={{
+                      style={ {
                         backgroundImage: "url(/img/products/product-3.jpg)",
-                      }}
+                      } }
                     />
                   </div>
-                  {/* Body */}
+                  {/* Body */ }
                   <div className="card-body my-auto px-md-10 text-center text-md-left">
-                    {/* Heading */}
+                    {/* Heading */ }
                     <h4 className="mb-0">Basic women’s Dresses</h4>
-                    {/* Link */}
+                    {/* Link */ }
                     <a
                       className="btn btn-link stretched-link px-0 text-reset"
                       href="shop.html"
@@ -261,22 +263,22 @@ export default function Home() {
                 </div>
               </div>
               <div className="col-12 col-md-5 col-lg-4 d-flex flex-column">
-                {/* Card */}
-                <div className="card text-white" style={{ minHeight: "400px" }}>
-                  {/* Background */}
+                {/* Card */ }
+                <div className="card text-white" style={ { minHeight: "400px" } }>
+                  {/* Background */ }
                   <div className="card-bg">
                     <div
                       className="card-bg-img bg-cover"
-                      style={{
+                      style={ {
                         backgroundImage: "url(/img/products/product-4.jpg)",
-                      }}
+                      } }
                     />
                   </div>
-                  {/* Body */}
+                  {/* Body */ }
                   <div className="card-body my-auto text-center">
-                    {/* Heading */}
+                    {/* Heading */ }
                     <h4 className="mb-0">Sweatshirts</h4>
-                    {/* Link */}
+                    {/* Link */ }
                     <a
                       className="btn btn-link stretched-link text-reset"
                       href="shop.html"
@@ -289,36 +291,39 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* TOP SELLERS */}
+        {/* TOP SELLERS */ }
         <section className="py-12">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-                {/* Heading */}
+                {/* Heading */ }
                 <h2 className="mb-4 text-center">Top month Sellers</h2>
-                {/* Nav */}
-                <div className="nav justify-content-center mb-10">
-                  <a
+                {/* Nav */ }
+                <div className="nav justify-content-center mb-10 ">
+                  <Tab.Title
+                    index={ 0 }
                     className="nav-link active"
                     href="#topSellersTab"
                     data-toggle="tab"
                   >
                     Women
-                  </a>
-                  <a
+                  </Tab.Title>
+                  <Tab.Title
+                    index={ 1 }
                     className="nav-link"
                     href="#topSellersTab"
                     data-toggle="tab"
                   >
                     Men
-                  </a>
-                  <a
+                  </Tab.Title>
+                  <Tab.Title
+                    index={ 2 }
                     className="nav-link"
                     href="#topSellersTab"
                     data-toggle="tab"
                   >
                     Kids
-                  </a>
+                  </Tab.Title>
                 </div>
               </div>
             </div>
@@ -326,15 +331,15 @@ export default function Home() {
               <div className="tab-pane fade show active" id="topSellersTab">
                 <div className="row">
                   <div className="col-6 col-md-4 col-lg-3">
-                    {/* Card */}
+                    {/* Card */ }
                     <div className="card mb-7">
-                      {/* Badge */}
+                      {/* Badge */ }
                       <div className="badge badge-white card-badge card-badge-left text-uppercase">
                         New
                       </div>
-                      {/* Image */}
+                      {/* Image */ }
                       <div className="card-img">
-                        {/* Image */}
+                        {/* Image */ }
                         <a className="card-img-hover" href="product.html">
                           <img
                             className="card-img-top card-img-back"
@@ -347,7 +352,7 @@ export default function Home() {
                             alt="..."
                           />
                         </a>
-                        {/* Actions */}
+                        {/* Actions */ }
                         <div className="card-actions">
                           <span className="card-action">
                             <button
@@ -376,21 +381,21 @@ export default function Home() {
                           </span>
                         </div>
                       </div>
-                      {/* Body */}
+                      {/* Body */ }
                       <div className="card-body px-0">
-                        {/* Category */}
+                        {/* Category */ }
                         <div className="font-size-xs">
                           <a className="text-muted" href="shop.html">
                             Shoes
                           </a>
                         </div>
-                        {/* Title */}
+                        {/* Title */ }
                         <div className="font-weight-bold">
                           <a className="text-body" href="product.html">
                             Leather mid-heel Sandals
                           </a>
                         </div>
-                        {/* Price */}
+                        {/* Price */ }
                         <div className="font-weight-bold text-muted">
                           $129.00
                         </div>
@@ -398,11 +403,11 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="col-6 col-md-4 col-lg-3">
-                    {/* Card */}
+                    {/* Card */ }
                     <div className="card mb-7">
-                      {/* Image */}
+                      {/* Image */ }
                       <div className="card-img">
-                        {/* Image */}
+                        {/* Image */ }
                         <a className="card-img-hover" href="product.html">
                           <img
                             className="card-img-top card-img-back"
@@ -415,7 +420,7 @@ export default function Home() {
                             alt="..."
                           />
                         </a>
-                        {/* Actions */}
+                        {/* Actions */ }
                         <div className="card-actions">
                           <span className="card-action">
                             <button
@@ -444,21 +449,21 @@ export default function Home() {
                           </span>
                         </div>
                       </div>
-                      {/* Body */}
+                      {/* Body */ }
                       <div className="card-body px-0">
-                        {/* Category */}
+                        {/* Category */ }
                         <div className="font-size-xs">
                           <a className="text-muted" href="shop.html">
                             Dresses
                           </a>
                         </div>
-                        {/* Title */}
+                        {/* Title */ }
                         <div className="font-weight-bold">
                           <a className="text-body" href="product.html">
                             Cotton floral print Dress
                           </a>
                         </div>
-                        {/* Price */}
+                        {/* Price */ }
                         <div className="font-weight-bold text-muted">
                           $40.00
                         </div>
@@ -466,15 +471,15 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="col-6 col-md-4 col-lg-3">
-                    {/* Card */}
+                    {/* Card */ }
                     <div className="card mb-7">
-                      {/* Badge */}
+                      {/* Badge */ }
                       <div className="badge badge-dark card-badge card-badge-left text-uppercase">
                         Sale
                       </div>
-                      {/* Image */}
+                      {/* Image */ }
                       <div className="card-img">
-                        {/* Image */}
+                        {/* Image */ }
                         <a className="card-img-hover" href="product.html">
                           <img
                             className="card-img-top card-img-back"
@@ -487,7 +492,7 @@ export default function Home() {
                             alt="..."
                           />
                         </a>
-                        {/* Actions */}
+                        {/* Actions */ }
                         <div className="card-actions">
                           <span className="card-action">
                             <button
@@ -516,21 +521,21 @@ export default function Home() {
                           </span>
                         </div>
                       </div>
-                      {/* Body */}
+                      {/* Body */ }
                       <div className="card-body px-0">
-                        {/* Category */}
+                        {/* Category */ }
                         <div className="font-size-xs">
                           <a className="text-muted" href="shop.html">
                             Shoes
                           </a>
                         </div>
-                        {/* Title */}
+                        {/* Title */ }
                         <div className="font-weight-bold">
                           <a className="text-body" href="product.html">
                             Leather Sneakers
                           </a>
                         </div>
-                        {/* Price */}
+                        {/* Price */ }
                         <div className="font-weight-bold">
                           <span className="font-size-xs text-gray-350 text-decoration-line-through">
                             $85.00
@@ -541,11 +546,11 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="col-6 col-md-4 col-lg-3">
-                    {/* Card */}
+                    {/* Card */ }
                     <div className="card mb-7">
-                      {/* Image */}
+                      {/* Image */ }
                       <div className="card-img">
-                        {/* Image */}
+                        {/* Image */ }
                         <a href="#!">
                           <img
                             className="card-img-top card-img-front"
@@ -553,7 +558,7 @@ export default function Home() {
                             alt="..."
                           />
                         </a>
-                        {/* Actions */}
+                        {/* Actions */ }
                         <div className="card-actions">
                           <span className="card-action">
                             <button
@@ -582,21 +587,21 @@ export default function Home() {
                           </span>
                         </div>
                       </div>
-                      {/* Body */}
+                      {/* Body */ }
                       <div className="card-body px-0">
-                        {/* Category */}
+                        {/* Category */ }
                         <div className="font-size-xs">
                           <a className="text-muted" href="shop.html">
                             Tops
                           </a>
                         </div>
-                        {/* Title */}
+                        {/* Title */ }
                         <div className="font-weight-bold">
                           <a className="text-body" href="product.html">
                             Cropped cotton Top
                           </a>
                         </div>
-                        {/* Price */}
+                        {/* Price */ }
                         <div className="font-weight-bold text-muted">
                           $29.00
                         </div>
@@ -604,11 +609,11 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="col-6 col-md-4 col-lg-3">
-                    {/* Card */}
+                    {/* Card */ }
                     <div className="card mb-7">
-                      {/* Image */}
+                      {/* Image */ }
                       <div className="card-img">
-                        {/* Image */}
+                        {/* Image */ }
                         <a href="#!">
                           <img
                             className="card-img-top card-img-front"
@@ -616,7 +621,7 @@ export default function Home() {
                             alt="..."
                           />
                         </a>
-                        {/* Actions */}
+                        {/* Actions */ }
                         <div className="card-actions">
                           <span className="card-action">
                             <button
@@ -645,21 +650,21 @@ export default function Home() {
                           </span>
                         </div>
                       </div>
-                      {/* Body */}
+                      {/* Body */ }
                       <div className="card-body px-0">
-                        {/* Category */}
+                        {/* Category */ }
                         <div className="font-size-xs">
                           <a className="text-muted" href="shop.html">
                             Dresses
                           </a>
                         </div>
-                        {/* Title */}
+                        {/* Title */ }
                         <div className="font-weight-bold">
                           <a className="text-body" href="product.html">
                             Floral print midi Dress
                           </a>
                         </div>
-                        {/* Price */}
+                        {/* Price */ }
                         <div className="font-weight-bold text-muted">
                           $50.00
                         </div>
@@ -667,15 +672,15 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="col-6 col-md-4 col-lg-3">
-                    {/* Card */}
+                    {/* Card */ }
                     <div className="card mb-7">
-                      {/* Badge */}
+                      {/* Badge */ }
                       <div className="badge badge-dark card-badge card-badge-left text-uppercase">
                         Sale
                       </div>
-                      {/* Image */}
+                      {/* Image */ }
                       <div className="card-img">
-                        {/* Image */}
+                        {/* Image */ }
                         <a className="card-img-hover" href="product.html">
                           <img
                             className="card-img-top card-img-back"
@@ -688,7 +693,7 @@ export default function Home() {
                             alt="..."
                           />
                         </a>
-                        {/* Actions */}
+                        {/* Actions */ }
                         <div className="card-actions">
                           <span className="card-action">
                             <button
@@ -717,21 +722,21 @@ export default function Home() {
                           </span>
                         </div>
                       </div>
-                      {/* Body */}
+                      {/* Body */ }
                       <div className="card-body px-0">
-                        {/* Category */}
+                        {/* Category */ }
                         <div className="font-size-xs">
                           <a className="text-muted" href="shop.html">
                             Bags
                           </a>
                         </div>
-                        {/* Title */}
+                        {/* Title */ }
                         <div className="font-weight-bold">
                           <a className="text-body" href="product.html">
                             Suede cross body Bag
                           </a>
                         </div>
-                        {/* Price */}
+                        {/* Price */ }
                         <div className="font-weight-bold">
                           <span className="font-size-xs text-gray-350 text-decoration-line-through">
                             $79.00
@@ -742,11 +747,11 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="col-6 col-md-4 col-lg-3">
-                    {/* Card */}
+                    {/* Card */ }
                     <div className="card mb-7">
-                      {/* Image */}
+                      {/* Image */ }
                       <div className="card-img">
-                        {/* Image */}
+                        {/* Image */ }
                         <a className="card-img-hover" href="product.html">
                           <img
                             className="card-img-top card-img-back"
@@ -759,7 +764,7 @@ export default function Home() {
                             alt="..."
                           />
                         </a>
-                        {/* Actions */}
+                        {/* Actions */ }
                         <div className="card-actions">
                           <span className="card-action">
                             <button
@@ -788,21 +793,21 @@ export default function Home() {
                           </span>
                         </div>
                       </div>
-                      {/* Body */}
+                      {/* Body */ }
                       <div className="card-body px-0">
-                        {/* Category */}
+                        {/* Category */ }
                         <div className="font-size-xs">
                           <a className="text-muted" href="shop.html">
                             Skirts
                           </a>
                         </div>
-                        {/* Title */}
+                        {/* Title */ }
                         <div className="font-weight-bold">
                           <a className="text-body" href="product.html">
                             Printed A-line Skirt
                           </a>
                         </div>
-                        {/* Price */}
+                        {/* Price */ }
                         <div className="font-weight-bold text-muted">
                           $79.00
                         </div>
@@ -810,15 +815,15 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="col-6 col-md-4 col-lg-3">
-                    {/* Card */}
+                    {/* Card */ }
                     <div className="card mb-7">
-                      {/* Badge */}
+                      {/* Badge */ }
                       <div className="badge badge-white card-badge card-badge text-uppercase">
                         New
                       </div>
-                      {/* Image */}
+                      {/* Image */ }
                       <div className="card-img">
-                        {/* Image */}
+                        {/* Image */ }
                         <a href="#!">
                           <img
                             className="card-img-top card-img-front"
@@ -826,7 +831,7 @@ export default function Home() {
                             alt="..."
                           />
                         </a>
-                        {/* Actions */}
+                        {/* Actions */ }
                         <div className="card-actions">
                           <span className="card-action">
                             <button
@@ -855,21 +860,21 @@ export default function Home() {
                           </span>
                         </div>
                       </div>
-                      {/* Body */}
+                      {/* Body */ }
                       <div className="card-body px-0">
-                        {/* Category */}
+                        {/* Category */ }
                         <div className="font-size-xs">
                           <a className="text-muted" href="shop.html">
                             Shoes
                           </a>
                         </div>
-                        {/* Title */}
+                        {/* Title */ }
                         <div className="font-weight-bold">
                           <a className="text-body" href="product.html">
                             Heel strappy Sandals
                           </a>
                         </div>
-                        {/* Price */}
+                        {/* Price */ }
                         <div className="font-weight-bold text-muted">
                           $90.00
                         </div>
@@ -881,7 +886,7 @@ export default function Home() {
             </div>
             <div className="row">
               <div className="col-12">
-                {/* Link  */}
+                {/* Link  */ }
                 <div className="mt-7 text-center">
                   <a className="link-underline" href="#!">
                     Discover more
@@ -891,20 +896,20 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* COUNTDOWN */}
+        {/* COUNTDOWN */ }
         <section
           className="py-13 bg-cover"
-          style={{ backgroundImage: "url(/img/covers/cover-4.jpg)" }}
+          style={ { backgroundImage: "url(/img/covers/cover-4.jpg)" } }
         >
           <div className="container">
             <div className="row justify-content-end">
               <div className="col-12 col-md-8 col-lg-6">
-                {/* Heading */}
+                {/* Heading */ }
                 <h3 className="mb-7">
                   Get -50% from <br />
                   Summer Collection
                 </h3>
-                {/* Counter */}
+                {/* Counter */ }
                 <div
                   className="d-flex mb-9"
                   data-countdown
@@ -962,7 +967,7 @@ export default function Home() {
                     <div className="heading-xxs text-muted">Seconds</div>
                   </div>
                 </div>
-                {/* Button */}
+                {/* Button */ }
                 <a className="btn btn-dark" href="shop.html">
                   Shop Now <i className="fe fe-arrow-right ml-2" />
                 </a>
@@ -970,307 +975,299 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* REVIEWS */}
+        {/* REVIEWS */ }
         <section className="py-12">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-12 col-md-10 col-lg-8 col-xl-6 text-center">
-                {/* Preheading */}
+                {/* Preheading */ }
                 <h6 className="heading-xxs mb-3 text-gray-400">
                   What buyers say
                 </h6>
-                {/* Heading */}
+                {/* Heading */ }
                 <h2 className="mb-10">Latest buyers Reviews</h2>
               </div>
             </div>
             <div className="row">
               <div className="col-12">
-                {/* Slider */}
-                <div data-flickity='{"pageDots": true}'>
-                  <div className="col-12 col-sm-8 col-md-6 col-lg-4">
-                    {/* Card */}
-                    <div className="card-lg card border">
-                      <div className="card-body">
-                        {/* Header */}
-                        <div className="row align-items-center mb-6">
-                          <div className="col-4">
-                            {/* Image */}
-                            <img
-                              src="/img/products/product-13.jpg"
-                              alt="..."
-                              className="img-fluid"
-                            />
-                          </div>
-                          <div className="col-8 ml-n2">
-                            {/* Preheading */}
-                            <a
-                              className="font-size-xs text-muted"
-                              href="shop.html"
-                            >
-                              Shoes
-                            </a>
-                            {/* Heading */}
-                            <a
-                              className="d-block font-weight-bold text-body"
-                              href="product.html"
-                            >
-                              Low top Sneakers
-                            </a>
-                            {/* Rating */}
-                            <div
-                              className="rating font-size-xxs text-warning"
-                              data-value={3}
-                            >
-                              <div className="rating-item">
-                                <i className="fas fa-star" />
-                              </div>
-                              <div className="rating-item">
-                                <i className="fas fa-star" />
-                              </div>
-                              <div className="rating-item">
-                                <i className="fas fa-star" />
-                              </div>
-                              <div className="rating-item">
-                                <i className="fas fa-star" />
-                              </div>
-                              <div className="rating-item">
-                                <i className="fas fa-star" />
-                              </div>
+                {/* Slider */ }
+                <Slider slidesPerView={ 3 }>
+                  {/* Card */ }
+                  <div className="card-lg card border">
+                    <div className="card-body">
+                      {/* Header */ }
+                      <div className="row align-items-center mb-6">
+                        <div className="col-4">
+                          {/* Image */ }
+                          <img
+                            src="/img/products/product-13.jpg"
+                            alt="..."
+                            className="img-fluid"
+                          />
+                        </div>
+                        <div className="col-8 ml-n2">
+                          {/* Preheading */ }
+                          <a
+                            className="font-size-xs text-muted"
+                            href="shop.html"
+                          >
+                            Shoes
+                          </a>
+                          {/* Heading */ }
+                          <a
+                            className="d-block font-weight-bold text-body"
+                            href="product.html"
+                          >
+                            Low top Sneakers
+                          </a>
+                          {/* Rating */ }
+                          <div
+                            className="rating font-size-xxs text-warning"
+                            data-value={ 3 }
+                          >
+                            <div className="rating-item">
+                              <i className="fas fa-star" />
+                            </div>
+                            <div className="rating-item">
+                              <i className="fas fa-star" />
+                            </div>
+                            <div className="rating-item">
+                              <i className="fas fa-star" />
+                            </div>
+                            <div className="rating-item">
+                              <i className="fas fa-star" />
+                            </div>
+                            <div className="rating-item">
+                              <i className="fas fa-star" />
                             </div>
                           </div>
                         </div>
-                        {/* Blockquote */}
-                        <blockquote className="mb-0">
-                          <p className="text-muted">
-                            From creepeth said moved given divide make multiply
-                            of him shall itself also above second doesn't unto
-                            created saying land herb sea midst night wherein.
-                          </p>
-                          <footer className="font-size-xs text-muted">
-                            Logan Edwards,{" "}
-                            <time dateTime="2019-06-01">01 Jun 2019</time>
-                          </footer>
-                        </blockquote>
                       </div>
+                      {/* Blockquote */ }
+                      <blockquote className="mb-0">
+                        <p className="text-muted">
+                          From creepeth said moved given divide make multiply
+                          of him shall itself also above second doesn't unto
+                          created saying land herb sea midst night wherein.
+                        </p>
+                        <footer className="font-size-xs text-muted">
+                          Logan Edwards,{ " " }
+                          <time dateTime="2019-06-01">01 Jun 2019</time>
+                        </footer>
+                      </blockquote>
                     </div>
                   </div>
-                  <div className="col-12 col-sm-8 col-md-6 col-lg-4">
-                    {/* Card */}
-                    <div className="card-lg card border">
-                      <div className="card-body">
-                        {/* Header */}
-                        <div className="row align-items-center mb-6">
-                          <div className="col-4">
-                            {/* Image */}
-                            <img
-                              src="/img/products/product-14.jpg"
-                              alt="..."
-                              className="img-fluid"
-                            />
-                          </div>
-                          <div className="col-8 ml-n2">
-                            {/* Preheading */}
-                            <a
-                              className="font-size-xs text-muted"
-                              href="shop.html"
-                            >
-                              Dresses
-                            </a>
-                            {/* Heading */}
-                            <a
-                              className="d-block font-weight-bold text-body"
-                              href="product.html"
-                            >
-                              Cotton print Dress
-                            </a>
-                            {/* Rating */}
-                            <div
-                              className="rating font-size-xxs text-warning"
-                              data-value={5}
-                            >
-                              <div className="rating-item">
-                                <i className="fas fa-star" />
-                              </div>
-                              <div className="rating-item">
-                                <i className="fas fa-star" />
-                              </div>
-                              <div className="rating-item">
-                                <i className="fas fa-star" />
-                              </div>
-                              <div className="rating-item">
-                                <i className="fas fa-star" />
-                              </div>
-                              <div className="rating-item">
-                                <i className="fas fa-star" />
-                              </div>
+                  {/* Card */ }
+                  <div className="card-lg card border">
+                    <div className="card-body">
+                      {/* Header */ }
+                      <div className="row align-items-center mb-6">
+                        <div className="col-4">
+                          {/* Image */ }
+                          <img
+                            src="/img/products/product-14.jpg"
+                            alt="..."
+                            className="img-fluid"
+                          />
+                        </div>
+                        <div className="col-8 ml-n2">
+                          {/* Preheading */ }
+                          <a
+                            className="font-size-xs text-muted"
+                            href="shop.html"
+                          >
+                            Dresses
+                          </a>
+                          {/* Heading */ }
+                          <a
+                            className="d-block font-weight-bold text-body"
+                            href="product.html"
+                          >
+                            Cotton print Dress
+                          </a>
+                          {/* Rating */ }
+                          <div
+                            className="rating font-size-xxs text-warning"
+                            data-value={ 5 }
+                          >
+                            <div className="rating-item">
+                              <i className="fas fa-star" />
+                            </div>
+                            <div className="rating-item">
+                              <i className="fas fa-star" />
+                            </div>
+                            <div className="rating-item">
+                              <i className="fas fa-star" />
+                            </div>
+                            <div className="rating-item">
+                              <i className="fas fa-star" />
+                            </div>
+                            <div className="rating-item">
+                              <i className="fas fa-star" />
                             </div>
                           </div>
                         </div>
-                        {/* Blockquote */}
-                        <blockquote className="mb-0">
-                          <p className="text-muted">
-                            God every fill great replenish darkness unto. Very
-                            open. Likeness their that light. Given under image
-                            to. Subdue of shall cattle day fish form saw spirit
-                            and given stars, us you whales may, land, saw fill
-                            unto.
-                          </p>
-                          <footer className="font-size-xs text-muted">
-                            Jane Jefferson,{" "}
-                            <time dateTime="2019-05-29">29 May 2019</time>
-                          </footer>
-                        </blockquote>
                       </div>
+                      {/* Blockquote */ }
+                      <blockquote className="mb-0">
+                        <p className="text-muted">
+                          God every fill great replenish darkness unto. Very
+                          open. Likeness their that light. Given under image
+                          to. Subdue of shall cattle day fish form saw spirit
+                          and given stars, us you whales may, land, saw fill
+                          unto.
+                        </p>
+                        <footer className="font-size-xs text-muted">
+                          Jane Jefferson,{ " " }
+                          <time dateTime="2019-05-29">29 May 2019</time>
+                        </footer>
+                      </blockquote>
                     </div>
                   </div>
-                  <div className="col-12 col-sm-8 col-md-6 col-lg-4">
-                    {/* Card */}
-                    <div className="card-lg card border">
-                      <div className="card-body">
-                        {/* Header */}
-                        <div className="row align-items-center mb-6">
-                          <div className="col-4">
-                            {/* Image */}
-                            <img
-                              src="/img/products/product-15.jpg"
-                              alt="..."
-                              className="img-fluid"
-                            />
-                          </div>
-                          <div className="col-8 ml-n2">
-                            {/* Preheading */}
-                            <a
-                              className="font-size-xs text-muted"
-                              href="shop.html"
-                            >
-                              T-shirts
-                            </a>
-                            {/* Heading */}
-                            <a
-                              className="d-block font-weight-bold text-body"
-                              href="product.html"
-                            >
-                              Oversized print T-shirt
-                            </a>
-                            {/* Rating */}
-                            <div
-                              className="rating font-size-xxs text-warning"
-                              data-value={4}
-                            >
-                              <div className="rating-item">
-                                <i className="fas fa-star" />
-                              </div>
-                              <div className="rating-item">
-                                <i className="fas fa-star" />
-                              </div>
-                              <div className="rating-item">
-                                <i className="fas fa-star" />
-                              </div>
-                              <div className="rating-item">
-                                <i className="fas fa-star" />
-                              </div>
-                              <div className="rating-item">
-                                <i className="fas fa-star" />
-                              </div>
+                  {/* Card */ }
+                  <div className="card-lg card border">
+                    <div className="card-body">
+                      {/* Header */ }
+                      <div className="row align-items-center mb-6">
+                        <div className="col-4">
+                          {/* Image */ }
+                          <img
+                            src="/img/products/product-15.jpg"
+                            alt="..."
+                            className="img-fluid"
+                          />
+                        </div>
+                        <div className="col-8 ml-n2">
+                          {/* Preheading */ }
+                          <a
+                            className="font-size-xs text-muted"
+                            href="shop.html"
+                          >
+                            T-shirts
+                          </a>
+                          {/* Heading */ }
+                          <a
+                            className="d-block font-weight-bold text-body"
+                            href="product.html"
+                          >
+                            Oversized print T-shirt
+                          </a>
+                          {/* Rating */ }
+                          <div
+                            className="rating font-size-xxs text-warning"
+                            data-value={ 4 }
+                          >
+                            <div className="rating-item">
+                              <i className="fas fa-star" />
+                            </div>
+                            <div className="rating-item">
+                              <i className="fas fa-star" />
+                            </div>
+                            <div className="rating-item">
+                              <i className="fas fa-star" />
+                            </div>
+                            <div className="rating-item">
+                              <i className="fas fa-star" />
+                            </div>
+                            <div className="rating-item">
+                              <i className="fas fa-star" />
                             </div>
                           </div>
                         </div>
-                        {/* Blockquote */}
-                        <blockquote className="mb-0">
-                          <p className="text-muted">
-                            Fill his waters wherein signs likeness waters.
-                            Second light gathered appear sixth fourth, seasons
-                            behold creeping female.
-                          </p>
-                          <footer className="font-size-xs text-muted">
-                            Darrell Baker,{" "}
-                            <time dateTime="2019-05-18">18 May 2019</time>
-                          </footer>
-                        </blockquote>
                       </div>
+                      {/* Blockquote */ }
+                      <blockquote className="mb-0">
+                        <p className="text-muted">
+                          Fill his waters wherein signs likeness waters.
+                          Second light gathered appear sixth fourth, seasons
+                          behold creeping female.
+                        </p>
+                        <footer className="font-size-xs text-muted">
+                          Darrell Baker,{ " " }
+                          <time dateTime="2019-05-18">18 May 2019</time>
+                        </footer>
+                      </blockquote>
                     </div>
                   </div>
-                  <div className="col-12 col-sm-8 col-md-6 col-lg-4">
-                    {/* Card */}
-                    <div className="card-lg card border">
-                      <div className="card-body">
-                        {/* Header */}
-                        <div className="row align-items-center mb-6">
-                          <div className="col-4">
-                            {/* Image */}
-                            <img
-                              src="/img/products/product-10.jpg"
-                              alt="..."
-                              className="img-fluid"
-                            />
-                          </div>
-                          <div className="col-8 ml-n2">
-                            {/* Preheading */}
-                            <a
-                              className="font-size-xs text-muted"
-                              href="shop.html"
-                            >
-                              Bags &amp; Accessories
-                            </a>
-                            {/* Heading */}
-                            <a
-                              className="d-block font-weight-bold text-body"
-                              href="product.html"
-                            >
-                              Suede cross body Bag
-                            </a>
-                            {/* Rating */}
-                            <div
-                              className="rating font-size-xxs text-warning"
-                              data-value={4}
-                            >
-                              <div className="rating-item">
-                                <i className="fas fa-star" />
-                              </div>
-                              <div className="rating-item">
-                                <i className="fas fa-star" />
-                              </div>
-                              <div className="rating-item">
-                                <i className="fas fa-star" />
-                              </div>
-                              <div className="rating-item">
-                                <i className="fas fa-star" />
-                              </div>
-                              <div className="rating-item">
-                                <i className="fas fa-star" />
-                              </div>
+                  {/* Card */ }
+                  <div className="card-lg card border">
+                    <div className="card-body">
+                      {/* Header */ }
+                      <div className="row align-items-center mb-6">
+                        <div className="col-4">
+                          {/* Image */ }
+                          <img
+                            src="/img/products/product-10.jpg"
+                            alt="..."
+                            className="img-fluid"
+                          />
+                        </div>
+                        <div className="col-8 ml-n2">
+                          {/* Preheading */ }
+                          <a
+                            className="font-size-xs text-muted"
+                            href="shop.html"
+                          >
+                            Bags &amp; Accessories
+                          </a>
+                          {/* Heading */ }
+                          <a
+                            className="d-block font-weight-bold text-body"
+                            href="product.html"
+                          >
+                            Suede cross body Bag
+                          </a>
+                          {/* Rating */ }
+                          <div
+                            className="rating font-size-xxs text-warning"
+                            data-value={ 4 }
+                          >
+                            <div className="rating-item">
+                              <i className="fas fa-star" />
+                            </div>
+                            <div className="rating-item">
+                              <i className="fas fa-star" />
+                            </div>
+                            <div className="rating-item">
+                              <i className="fas fa-star" />
+                            </div>
+                            <div className="rating-item">
+                              <i className="fas fa-star" />
+                            </div>
+                            <div className="rating-item">
+                              <i className="fas fa-star" />
                             </div>
                           </div>
                         </div>
-                        {/* Blockquote */}
-                        <blockquote className="mb-0">
-                          <p className="text-muted">
-                            God every fill great replenish darkness unto. Very
-                            open. Likeness their that light. Given under image
-                            to. Subdue of shall cattle day fish form saw spirit
-                            and given stars.
-                          </p>
-                          <footer className="font-size-xs text-muted">
-                            Pavel Doe,{" "}
-                            <time dateTime="2019-05-29">29 May 2019</time>
-                          </footer>
-                        </blockquote>
                       </div>
+                      {/* Blockquote */ }
+                      <blockquote className="mb-0">
+                        <p className="text-muted">
+                          God every fill great replenish darkness unto. Very
+                          open. Likeness their that light. Given under image
+                          to. Subdue of shall cattle day fish form saw spirit
+                          and given stars.
+                        </p>
+                        <footer className="font-size-xs text-muted">
+                          Pavel Doe,{ " " }
+                          <time dateTime="2019-05-29">29 May 2019</time>
+                        </footer>
+                      </blockquote>
                     </div>
                   </div>
-                </div>
+                </Slider>
               </div>
             </div>
           </div>
         </section>
-        {/* BRANDS */}
+        {/* BRANDS */ }
         <section className="py-12 bg-light">
           <div className="container">
             <div className="row">
               <div className="col-12 text-center">
-                {/* Heading */}
+                {/* Heading */ }
                 <h2 className="mb-3">@shopper</h2>
-                {/* Subheading */}
+                {/* Subheading */ }
                 <p className="mb-10 font-size-lg text-gray-500">
                   Appear, dry there darkness they're seas, dry waters.
                 </p>
@@ -1278,126 +1275,126 @@ export default function Home() {
             </div>
             <div className="row mx-n1 mb-10">
               <div className="col-6 col-sm-4 col-md px-1">
-                {/* Card */}
+                {/* Card */ }
                 <div className="card mb-2">
-                  {/* Image */}
+                  {/* Image */ }
                   <img
                     src="/img/products/product-16.jpg"
                     alt="..."
                     className="card-img"
                   />
-                  {/* Overlay */}
+                  {/* Overlay */ }
                   <a
                     className="card-img-overlay card-img-overlay-hover align-items-center bg-dark-40"
                     href="blog-post.html"
                   >
                     <p className="my-0 font-size-xxs text-center text-white">
-                      <i className="fe fe-heart mr-2" /> 248{" "}
+                      <i className="fe fe-heart mr-2" /> 248{ " " }
                       <i className="fe fe-message-square mr-2 ml-3" /> 7
                     </p>
                   </a>
                 </div>
               </div>
               <div className="col-6 col-sm-4 col-md px-1">
-                {/* Card */}
+                {/* Card */ }
                 <div className="card mb-2">
-                  {/* Image */}
+                  {/* Image */ }
                   <img
                     src="/img/products/product-17.jpg"
                     alt="..."
                     className="card-img"
                   />
-                  {/* Overlay */}
+                  {/* Overlay */ }
                   <a
                     className="card-img-overlay card-img-overlay-hover align-items-center bg-dark-40"
                     href="blog-post.html"
                   >
                     <p className="my-0 font-size-xxs text-center text-white">
-                      <i className="fe fe-heart mr-2" /> 248{" "}
+                      <i className="fe fe-heart mr-2" /> 248{ " " }
                       <i className="fe fe-message-square mr-2 ml-3" /> 7
                     </p>
                   </a>
                 </div>
               </div>
               <div className="col-6 col-sm-4 col-md px-1">
-                {/* Card */}
+                {/* Card */ }
                 <div className="card mb-2">
-                  {/* Image */}
+                  {/* Image */ }
                   <img
                     src="/img/products/product-18.jpg"
                     alt="..."
                     className="card-img"
                   />
-                  {/* Overlay */}
+                  {/* Overlay */ }
                   <a
                     className="card-img-overlay card-img-overlay-hover align-items-center bg-dark-40"
                     href="blog-post.html"
                   >
                     <p className="my-0 font-size-xxs text-center text-white">
-                      <i className="fe fe-heart mr-2" /> 248{" "}
+                      <i className="fe fe-heart mr-2" /> 248{ " " }
                       <i className="fe fe-message-square mr-2 ml-3" /> 7
                     </p>
                   </a>
                 </div>
               </div>
               <div className="col-6 col-sm-4 col-md px-1">
-                {/* Card */}
+                {/* Card */ }
                 <div className="card mb-2">
-                  {/* Image */}
+                  {/* Image */ }
                   <img
                     src="/img/products/product-19.jpg"
                     alt="..."
                     className="card-img"
                   />
-                  {/* Overlay */}
+                  {/* Overlay */ }
                   <a
                     className="card-img-overlay card-img-overlay-hover align-items-center bg-dark-40"
                     href="blog-post.html"
                   >
                     <p className="my-0 font-size-xxs text-center text-white">
-                      <i className="fe fe-heart mr-2" /> 248{" "}
+                      <i className="fe fe-heart mr-2" /> 248{ " " }
                       <i className="fe fe-message-square mr-2 ml-3" /> 7
                     </p>
                   </a>
                 </div>
               </div>
               <div className="col-6 col-sm-4 col-md px-1">
-                {/* Card */}
+                {/* Card */ }
                 <div className="card">
-                  {/* Image */}
+                  {/* Image */ }
                   <img
                     src="/img/products/product-20.jpg"
                     alt="..."
                     className="card-img"
                   />
-                  {/* Overlay */}
+                  {/* Overlay */ }
                   <a
                     className="card-img-overlay card-img-overlay-hover align-items-center bg-dark-40"
                     href="blog-post.html"
                   >
                     <p className="my-0 font-size-xxs text-center text-white">
-                      <i className="fe fe-heart mr-2" /> 248{" "}
+                      <i className="fe fe-heart mr-2" /> 248{ " " }
                       <i className="fe fe-message-square mr-2 ml-3" /> 7
                     </p>
                   </a>
                 </div>
               </div>
               <div className="col-6 col-sm-4 col-md px-1">
-                {/* Card */}
+                {/* Card */ }
                 <div className="card">
-                  {/* Image */}
+                  {/* Image */ }
                   <img
                     src="/img/products/product-21.jpg"
                     alt="..."
                     className="card-img"
                   />
-                  {/* Overlay */}
+                  {/* Overlay */ }
                   <a
                     className="card-img-overlay card-img-overlay-hover align-items-center bg-dark-40"
                     href="blog-post.html"
                   >
                     <p className="my-0 font-size-xxs text-center text-white">
-                      <i className="fe fe-heart mr-2" /> 248{" "}
+                      <i className="fe fe-heart mr-2" /> 248{ " " }
                       <i className="fe fe-message-square mr-2 ml-3" /> 7
                     </p>
                   </a>
@@ -1406,7 +1403,7 @@ export default function Home() {
             </div>
             <div className="row">
               <div className="col-4 col-sm-3 col-md text-center">
-                {/* Brand */}
+                {/* Brand */ }
                 <img
                   src="/img/brands/gray-350/mango.svg"
                   alt="..."
@@ -1414,7 +1411,7 @@ export default function Home() {
                 />
               </div>
               <div className="col-4 col-sm-3 col-md text-center">
-                {/* Brand */}
+                {/* Brand */ }
                 <img
                   src="/img/brands/gray-350/zara.svg"
                   alt="..."
@@ -1422,7 +1419,7 @@ export default function Home() {
                 />
               </div>
               <div className="col-4 col-sm-3 col-md text-center">
-                {/* Brand */}
+                {/* Brand */ }
                 <img
                   src="/img/brands/gray-350/reebok.svg"
                   alt="..."
@@ -1430,7 +1427,7 @@ export default function Home() {
                 />
               </div>
               <div className="col-4 col-sm-3 col-md text-center">
-                {/* Brand */}
+                {/* Brand */ }
                 <img
                   src="/img/brands/gray-350/asos.svg"
                   alt="..."
@@ -1438,7 +1435,7 @@ export default function Home() {
                 />
               </div>
               <div className="col-4 col-sm-3 col-md text-center">
-                {/* Brand */}
+                {/* Brand */ }
                 <img
                   src="/img/brands/gray-350/stradivarius.svg"
                   alt="..."
@@ -1446,7 +1443,7 @@ export default function Home() {
                 />
               </div>
               <div className="col-4 col-sm-3 col-md text-center">
-                {/* Brand */}
+                {/* Brand */ }
                 <img
                   src="/img/brands/gray-350/adidas.svg"
                   alt="..."
@@ -1454,7 +1451,7 @@ export default function Home() {
                 />
               </div>
               <div className="col-4 col-sm-3 col-md text-center">
-                {/* Brand */}
+                {/* Brand */ }
                 <img
                   src="/img/brands/gray-350/bershka.svg"
                   alt="..."
