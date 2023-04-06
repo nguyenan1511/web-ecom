@@ -17,7 +17,7 @@ export default function Wishlist() {
                 <div className="row">
                     {
                         loading ? [ ...Array(6) ].map((e, i) => <Skeleton key={ i } style={ { height: 250 } } />)
-                            : data.map(e => <ProductCard key={ e._id } { ...e.product } />)
+                            : data.map(e => <ProductCard key={ e.id } { ...e } />)
                     }
                 </div>
                 {/* Pagination */ }

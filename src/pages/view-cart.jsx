@@ -17,22 +17,22 @@ export default function ViewCart() {
 
     const { cart } = useCart()
     const [ promotion, setPromotion ] = useState('')
-    const { error: errPromotion, loading, execute: addPromotion } = useAsync(cartService.addPromotion)
+    const { error: errPromotion, loading, execute: addPromotion } = useAsync(cartService.precheckout)
     const dispatch = useDispatch()
     useEffect(() => {
         if (cart.promotionCode) {
             setPromotion(cart.promotionCode)
         }
     }, cart.promotionCode)
-
     const onAddPromotion = async (ev) => {
         ev.preventDefault()
         if (promotion.trim()) {
-            await addPromotion({ promotionCode: promotion })
+            await addPromotion({ promotionCode: [ promotion ] })
             dispatch(getCartAction())
         }
 
     }
+    console.log('cart.listItems', cart.listItems)
 
     if (cart?.totalQuantity === 0) {
         return <Navigate to={ path.Shop } />
@@ -53,7 +53,7 @@ export default function ViewCart() {
                             {/* List group */ }
                             <ul className="list-group list-group-lg list-group-flush-x mb-6">
                                 {
-                                    cart?.listItems?.map(ev => <ViewCartItem key={ ev._id } { ...ev } />)
+                                    cart?.listItems?.map(ev => <ViewCartItem key={ ev.id } { ...ev } />)
                                 }
                             </ul>
                             {/* Footer */ }

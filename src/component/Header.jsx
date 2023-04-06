@@ -3,9 +3,12 @@ import { useDispatch } from "react-redux";
 import { toggleCartDrawerAction, toggleSearchDrawerAction } from "../store/pageReducer";
 import { useCart } from "../hooks/useCart"
 import { Link } from "react-router-dom";
+import { path } from "../config/path";
+import { useTranslate } from "../core/component/TranslateProvider";
+import Select from "./Select";
 
 export default function Header() {
-
+  const { t, selectLocale, locale } = useTranslate()
   const dispatch = useDispatch()
   const { cart } = useCart()
   const onOpenSearchModal = (ev) => {
@@ -106,45 +109,40 @@ export default function Header() {
                   </a>
                 </div>
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item">
                 {/* Toggle */ }
-                <a
-                  className="nav-link dropdown-toggle"
-                  data-toggle="dropdown"
-                  href="#"
-                >
-                  English
-                </a>
-                {/* Menu */ }
-                <div className="dropdown-menu minw-0">
-                  <a className="dropdown-item" href="#">
-                    English
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    French
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    German
-                  </a>
-                </div>
+                <Select
+                  defaultValue={ locale }
+                  options={ [
+                    { value: 'en', label: 'English' },
+                    { value: 'fr', label: 'Français' },
+                    { value: 'vi', label: 'Tiếng Việt' }
+                  ] }
+
+                  onChange={ (value) => {
+                    selectLocale(value)
+                  } }
+                />
+
               </li>
             </ul>
             {/* Nav */ }
             <ul className="nav navbar-nav mr-8">
               <li className="nav-item">
                 <a className="nav-link" href="./shipping-and-returns.html">
-                  Shipping
+                  { t('Shipping') }
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="./faq.html">
-                  FAQ
-                </a>
+                <Link className="nav-link" to={ path.FAQ }>
+                  { t('FAQ') }
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="./contact-us.html">
-                  Contact
-                </a>
+                <Link className="nav-link" to={ path.Contact }>
+                  { t('Contact') }
+
+                </Link>
               </li>
             </ul>
             {/* Nav */ }
@@ -198,9 +196,9 @@ export default function Header() {
             <ul className="navbar-nav mx-auto">
               <li className="nav-item dropdown">
                 {/* Toggle */ }
-                <a className="nav-link" data-toggle="dropdown" href="#">
-                  Home
-                </a>
+                <Link className="nav-link" data-toggle="dropdown" to={ path.Home }>
+                  { t('Home') }
+                </Link>
                 {/* Menu */ }
                 <div className="dropdown-menu">
                   <div className="card card-lg">
@@ -274,9 +272,9 @@ export default function Header() {
               </li>
               <li className="nav-item dropdown position-static">
                 {/* Toggle */ }
-                <a className="nav-link" data-toggle="dropdown" href="#">
-                  Catalog
-                </a>
+                <Link className="nav-link" data-toggle="dropdown" to={ path.Shop } >
+                  { t('Product') }
+                </Link>
                 {/* Menu */ }
                 <div className="dropdown-menu w-100">
                   {/* Tabs */ }
@@ -644,9 +642,9 @@ export default function Header() {
               </li>
               <li className="nav-item dropdown">
                 {/* Toggle */ }
-                <a className="nav-link" data-toggle="dropdown" href="#">
-                  Shop
-                </a>
+                <Link className="nav-link" data-toggle="dropdown" to={ path.Shop }>
+                  { t('Shop') }
+                </Link>
                 {/* Menu */ }
                 <div className="dropdown-menu" style={ { minWidth: "650px" } }>
                   <div className="card card-lg">
@@ -948,9 +946,9 @@ export default function Header() {
               </li>
               <li className="nav-item dropdown">
                 {/* Toggle */ }
-                <a className="nav-link" data-toggle="dropdown" href="#">
-                  Pages
-                </a>
+                <Link className="nav-link" data-toggle="dropdown" to={ path.Shop }>
+                  { t('Shop') }
+                </Link>
                 {/* Menu */ }
                 <div className="dropdown-menu">
                   <div className="card card-lg">
@@ -1002,9 +1000,9 @@ export default function Header() {
               </li>
               <li className="nav-item dropdown">
                 {/* Toggle */ }
-                <a className="nav-link" data-toggle="dropdown" href="#">
+                <Link className="nav-link" data-toggle="dropdown" href="#">
                   Blog
-                </a>
+                </Link>
                 {/* Menu */ }
                 <div className="dropdown-menu">
                   <div className="card card-lg">
@@ -1029,9 +1027,9 @@ export default function Header() {
                 </div>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="docs/getting-started.html">
+                <Link className="nav-link" href="docs/getting-started.html">
                   Docs
-                </a>
+                </Link>
               </li>
             </ul>
             {/* Nav */ }

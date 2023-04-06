@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { removeCartAction, updateQuantityCartAction } from '../store/cartReducer'
+import { addCartAction, removeCartAction } from '../store/cartReducer'
 import { currency } from '../utils/currency'
 import InputQuantity from './InputQuantity'
 
@@ -12,14 +12,13 @@ export default function ViewCartItem({ product, quantity }) {
         ev.preventDefault()
         dispatch(removeCartAction({ id: product.id }))
     }
-    // console.log('id', product.configurable_options?.[ 1 ]?.values?.[ 0 ])
     return (
         <li className="list-group-item">
             <div className="row align-items-center">
                 <div className="col-3">
                     {/* Image */ }
                     <a href="product.html">
-                        <img src={ product.images?.[ 0 ]?.thumbnail_url } alt="..." className="img-fluid" />
+                        <img src={ product?.thumbnail_url } alt="..." className="img-fluid" />
                     </a>
                 </div>
                 <div className="col">
@@ -37,13 +36,13 @@ export default function ViewCartItem({ product, quantity }) {
                         <InputQuantity
                             value={ quantity }
                             onIncrement={ () => {
-                                dispatch(updateQuantityCartAction({
+                                dispatch(addCartAction({
                                     id: product.id,
                                     quantity: quantity + 1
                                 }))
                             } }
                             onDecrement={ () => {
-                                dispatch(updateQuantityCartAction({
+                                dispatch(addCartAction({
                                     id: product.id,
                                     quantity: quantity - 1
                                 }))

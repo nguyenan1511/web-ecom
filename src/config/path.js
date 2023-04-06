@@ -13,5 +13,7 @@ export const path = {
     ViewCart: '/view-cart',
     Checkout: '/checkout',
     OrderCompleted: '/order-completed/:id',
-    ProductDetail: '/product/:slug'
+    ProductDetail: '/product/:slug',
+    FAQ: '/FAQ',
+    Contact: '/contact',
 }

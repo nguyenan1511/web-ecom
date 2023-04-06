@@ -18,6 +18,8 @@ const ViewCart = lazy(() => import('./pages/view-cart'))
 const Checkout = lazy(() => import('./pages/checkout'))
 const OrderCompleted = lazy(() => import('./pages/OrderCompleted'))
 const ProductDetail = lazy(() => import('./pages/product/[slug]'))
+const FAQ = lazy(() => import('./pages/FAQ'))
+const Contact = lazy(() => import('./pages/contact'))
 
 const routers = [
     {
@@ -50,6 +52,15 @@ const routers = [
 
             {
                 path: path.ProductDetail, element: <ProductDetail />
+            },
+
+            {
+                path: path.FAQ, element: <FAQ />
+            },
+
+            {
+                path: path.Contact, element: <Contact />
+
             },
 
             {

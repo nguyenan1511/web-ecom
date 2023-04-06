@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { generatePath, Navigate, useNavigate } from 'react-router-dom'
@@ -20,10 +21,12 @@ export default function Checkout() {
 
     const { cart } = useCart()
     const navigate = useNavigate()
-    const { data: address } = useQuery(() => profileService.getAddressDefault())
+    const { data: address } = useQuery(() => profileService.getAddress())
     const { execute: checkout, loading, error: errCheckout } = useAsync(cartService.checkout)
+    const { execute: changeShippingMethod, loading: loadPreCheckout, error: errPreCheckout } = useAsync(cartService.precheckout)
+    const [ shipping, setShipping ] = useState('tieu-chuan')
     const { user } = useAuth()
-
+    // console.log('cart', cart)
     // console.log('address', address)
     const dispatch = useDispatch()
     const { form, setForm, validate, error, register } = useForm({
@@ -61,9 +64,9 @@ export default function Checkout() {
     const onSubmit = async () => {
         if (validate()) {
             const res = await (checkout({
-                'shippingMethod': cart.shippingMethod,
-                'paymentMethod': cart.paymentMethod,
-                'shippingAddress': form,
+                'shippingMethod': cart?.shippingMethod,
+                'paymentMethod': cart?.paymentMethod,
+                'shipping': form,
                 'note': form.note
             }))
             navigate(generatePath(path.OrderCompleted, { id: res.data._id }))
@@ -71,8 +74,15 @@ export default function Checkout() {
         }
     }
 
+    useEffect(() => {
+        if (cart.shippingMethod) {
+            setShipping(cart.shippingMethod)
+        }
+    }, cart.shippingMethod)
+
     const onChangeShippingMethod = async (method) => {
-        await cartService.changeShippingMethod(method)
+
+        await changeShippingMethod({ shippingMethod: shipping })
         dispatch(getCartAction())
     }
 
@@ -170,22 +180,33 @@ export default function Checkout() {
                                                         </label>
                                                     </div>
                                                 </td>
-                                                <td>Delivery in 5 - 7 working days</td>
+                                                <td>Delivery in 3 - 5 working days</td>
                                                 <td>14.000 vnđ</td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <div className="custom-control custom-radio">
-                                                        <input onChange={ () => onChangeShippingMethod('giao-hang-nhanh') } checked={ cart?.shippingMethod === 'giao-hang-nhanh' } className="custom-control-input" id="checkoutShippingExpress" name="shipping" type="radio" />
+                                                        <input onChange={ () => onChangeShippingMethod(setShipping('giao-hang-nhanh')) } checked={ cart?.shippingMethod === 'giao-hang-nhanh' } className="custom-control-input" id="checkoutShippingExpress" name="shipping" type="radio" />
                                                         <label className="custom-control-label text-body text-nowrap" htmlFor="checkoutShippingExpress">
                                                             Express Shipping
                                                         </label>
                                                     </div>
                                                 </td>
-                                                <td>Delivery in 2 - 3 working days</td>
+                                                <td>Delivery in 1 - 2 working days</td>
                                                 <td>35.000 vnđ</td>
                                             </tr>
-
+                                            <tr>
+                                                <td>
+                                                    <div className="custom-control custom-radio">
+                                                        <input onChange={ () => onChangeShippingMethod(setShipping('mien-phi')) } checked={ cart?.shippingMethod === 'mien-phi' } className="custom-control-input" id="checkoutShippingFree" name="shipping" type="radio" />
+                                                        <label className="custom-control-label text-body text-nowrap" htmlFor="checkoutShippingFree">
+                                                            Free Shipping
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>Delivery in 5 - 7 working days</td>
+                                                <td>Free</td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -281,7 +302,7 @@ export default function Checkout() {
                                 }
                             </ul>
                             {/* Card */ }
-                            <TotalBill showShipping />
+                            <TotalBill showShipping showTax />
                             {/* Disclaimer */ }
                             <p className="mb-7 font-size-xs text-gray-500">
                                 Your personal data will be used to process your order, support

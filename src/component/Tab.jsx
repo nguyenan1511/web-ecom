@@ -4,11 +4,12 @@ import { useEffect } from "react";
 import { useRef } from "react";
 import { Children } from "react";
 import { createContext } from "react";
-import { cn } from "../core";
+import { cn, useSearch } from "../core";
 
 const Context = createContext({})
 
-export const Tab = ({ children }) => {
+export const Tab = ({ children, name = 'tab' }) => {
+    const _defaultValue = useSearch(name)
     const [ indexActive, setIndexActive ] = useState(0)
     return (
         <Context.Provider value={ { indexActive, setIndexActive } }>{ children }</Context.Provider>

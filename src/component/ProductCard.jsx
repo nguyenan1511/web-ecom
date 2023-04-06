@@ -47,7 +47,7 @@ export default function ProductCard({
 
   const onAddWishlist = async () => {
     try {
-      await addWishlist(_id)
+      await addWishlist(id)
       message.success(`Thêm sản phẩm ${name} trong wishlist thành công!`)
     }
     catch (err) {

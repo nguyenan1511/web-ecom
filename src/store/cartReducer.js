@@ -24,7 +24,7 @@ export const getCartAction = () => {
 }
 
 export const addCartAction = createThunkAction(async (data, dispatch) => {
-    const res = await cartService.addProduct(data.id)
+    const res = await cartService.addProduct(data.id, { quantity: data.quantity })
 
     if (res.updateCount) {
         dispatch(getCartAction())
@@ -52,17 +52,13 @@ export const addCartAction = createThunkAction(async (data, dispatch) => {
 
 export const removeCartAction = createThunkAction(async (data, dispatch) => {
     const res = await cartService.removeItem(data.id)
-    if (res.updateCount) {
+    if (res.deleteCount) {
         dispatch(getCartAction())
     }
 })
 
-export const updateQuantityCartAction = createThunkAction(async (data, dispatch) => {
-    const res = await cartService.updateQuantity(data.id, { quantity: data.quantity })
-    if (res.updateCount) {
-        dispatch(getCartAction())
-    }
-})
+
+
 
 export default function cartReducer(state = initialState, action) {
     switch (action.type) {

@@ -1,5 +1,4 @@
 import React from 'react'
-import { updateQuantityCartAction } from '../store/cartReducer'
 import styled from 'styled-components';
 
 const ButtonQuantity = styled.button`

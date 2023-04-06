@@ -1,10 +1,12 @@
 import React from 'react'
+import { useAsync } from '../core'
 import { useCart } from '../hooks/useCart'
+import cartService from '../service/cart.service'
 import { currency } from '../utils/currency'
 
-export default function TotalBill({ children, showShipping }) {
+export default function TotalBill({ children, showShipping, showTax }) {
     const { cart } = useCart()
-
+    // const { execute: precheckout, loading: loadPreCheckout, error: errPreCheckout } = useAsync(cartService.precheckout)
     return (
         <>
             <div className="card mb-7 bg-light">
@@ -13,9 +15,11 @@ export default function TotalBill({ children, showShipping }) {
                         <li className="list-group-item d-flex">
                             <span>Subtotal</span> <span className="ml-auto font-size-sm">{ currency(cart?.subTotal || 0) } vnđ</span>
                         </li>
-                        <li className="list-group-item d-flex">
-                            <span>Tax  10%</span> <span className="ml-auto font-size-sm">{ currency(cart?.tax) } vnđ</span>
-                        </li>
+                        {
+                            showTax && <li className="list-group-item d-flex">
+                                <span>Tax</span> <span className="ml-auto font-size-sm">{ currency(cart?.tax) } vnđ</span>
+                            </li>
+                        }
                         {
                             showShipping && <li className="list-group-item d-flex">
                                 <span>Shipping</span> <span className="ml-auto font-size-sm"> { currency(cart?.shipping) } vnđ </span>

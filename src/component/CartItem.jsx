@@ -2,7 +2,7 @@ import { Spin } from 'antd';
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
-import { removeCartAction, updateQuantityCartAction } from '../store/cartReducer';
+import { addCartAction, removeCartAction } from '../store/cartReducer';
 import { currency } from '../utils/currency';
 import InputQuantity from './InputQuantity';
 
@@ -28,10 +28,10 @@ export default function CartItem({ product, quantity, enableAction }) {
 
     const dispatch = useDispatch()
     const [ loading, setLoading ] = useState(false)
-    const img = product.images?.[ 0 ]?.thumbnail_url;
+    const img = product?.thumbnail_url;
+    // console.log('product.thumbnail_url', product.thumbnail_url)
     const onRemove = (ev) => {
         ev.preventDefault()
-
         setLoading(true)
         dispatch(removeCartAction({
             id: product.id,
@@ -44,12 +44,12 @@ export default function CartItem({ product, quantity, enableAction }) {
         }))
     }
 
-
     const updateQuantity = (quantity) => {
-        dispatch(updateQuantityCartAction({
+        dispatch(addCartAction({
             id: product.id,
             quantity
         }))
+
     }
 
     return (

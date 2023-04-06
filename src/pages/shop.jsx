@@ -1261,7 +1261,7 @@ export default function Shop() {
                       <div className="col-12 col-md-10 col-lg-8 col-xl-6 align-self-center">
                         <div className="card-body px-md-10 py-11">
                           {/* Heading */ }
-                          <h4>2019 Summer Collection</h4>
+                          <h4>2023 Summer Collection</h4>
                           {/* Button */ }
                           <a
                             className="btn btn-link px-0 text-body"

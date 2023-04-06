@@ -108,6 +108,7 @@ export default function Auth() {
             //     }
             // }))
         }
+        console.log('user', user)
     }
 
     if (user)

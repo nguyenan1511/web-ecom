@@ -2,13 +2,13 @@ import api from "../config/api";
 
 const userService = {
     getUser() {
-        return api.get('/user/get-info')
+        return api.get('/users')
     },
     updateInfo(data) {
-        return api.post('/user/update', data)
+        return api.patch('/users/update', data)
     },
     changePassword(data) {
-        return api.post('/user/change-password', data)
+        return api.post('/users/change-password', data)
     }
 }
 
