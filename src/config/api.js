@@ -4,7 +4,11 @@ import authService from "../service/auth.service";
 // axios.defaults.baseURL = import.meta.env.VITE_API_HOST
 
 const api = axios.create({
-    baseURL: import.meta.env.VITE_API_HOST
+    baseURL: import.meta.env.VITE_API_HOST,
+    headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+      },
 })
 
 api.interceptors.request.use((config) => {
